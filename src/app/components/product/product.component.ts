@@ -10,10 +10,12 @@ export class ProductComponent implements OnInit {
 
   @Input() 
   product: Product = {
-    id: '',
-    name: '',
+    id: -1,
+    title: '',
     price: 0,
-    image: ''
+    image: '',
+    description: '',
+    category: ''
   };
 
   @Output()
