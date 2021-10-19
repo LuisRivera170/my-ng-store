@@ -15,6 +15,24 @@
     background: transparent;
 }
 
+.show-mobile .side-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: translateY(100%);
+    transition: all ease-out .5s;
+}
+
+.show-mobile .side-menu.active {
+    transform: translateY(0%);
+}
+
 .hide-mobile {
     display: none;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
