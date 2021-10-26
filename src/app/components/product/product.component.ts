@@ -13,9 +13,12 @@ export class ProductComponent implements OnInit {
     id: -1,
     title: '',
     price: 0,
-    image: '',
+    images: [],
     description: '',
-    category: ''
+    category: {
+      id: '',
+      name: ''
+    }
   };
 
   @Output()

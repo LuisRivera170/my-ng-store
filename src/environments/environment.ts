@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlServiceBase: 'https://fakestoreapi.com'
+  urlServiceBase: 'https://young-sands-07814.herokuapp.com/api'
 };
 
 /*
