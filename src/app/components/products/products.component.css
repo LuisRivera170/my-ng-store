@@ -1,3 +1,5 @@
+@import "~swiper/swiper.min.css";
+
 :host {
     margin: 10px;
 }
@@ -5,6 +7,24 @@
 .products--grid {
     display: flex;
     flex-direction: column;
+}
+
+.product-detail {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out .5s;
+    transform: translateX(100%);
+}
+
+.product-detail.active {
+    transform: translateX(0);
 }
 
 /* Tablets */
