@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product.model';
+import { CreateProductDTO, Product } from 'src/app/models/product.model';
 import { ProductsService } from 'src/app/services/products.service';
 import { StoreService } from 'src/app/services/store.service';
 import SwiperCore from 'swiper';
@@ -55,6 +55,20 @@ export class ProductsComponent implements OnInit {
 
   toggleProductDetail() {
     this.showProductDetail = !this.showProductDetail;
+  }
+
+  createNewProduct() {
+    const product: CreateProductDTO = {
+      title: 'Nuevo producto',
+      price: 1000,
+      images: [],
+      description: 'blablabla',
+      categoryId: 1
+    }
+    this.productService.create(product).subscribe(data => {
+      console.log('created', data);
+      this.products.unshift(data);
+    });
   }
 
 }
